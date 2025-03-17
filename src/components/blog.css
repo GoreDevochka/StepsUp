@@ -1,20 +1,25 @@
 .blogi {
-    margin: 40px;
     display: flex;
-    justify-content: center; /* Center the kartochki objects */
-    gap: 200px; /* Add 200px gap between kartochki objects */
-    text-align: center;
+    justify-content: space-between;
   }
   
   .blog_title {
-    font-size: 32px;
-    color: #8F4800;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    font-size: 24PX;
+    color: #000000;
+    font-weight: 800;
   }
   
   .blog_subtitle {
-   font-size: 24px;
-   color: #8F4800;
-   text-overflow: ellipsis; 
+   font-size: 16px;
+   color: rgba(113, 113, 113, 1);
+  }
+  .blogi_card{
+    width: 640px;
+    padding: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  .title{
+    width: 460px;
   }

@@ -10,7 +10,7 @@ export default function App() {
     <div>
     <Header /> 
       <Main />
-      <Blog />
+      <Blog targetId={1} />
     <Footer />
     </div>
   )

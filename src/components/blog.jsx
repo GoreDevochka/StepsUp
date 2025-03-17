@@ -1,17 +1,19 @@
 import React from "react";
 import BlogiData from "../data/blogi_data";
-
+import './blog.css';
 const Blog = ({ targetId }) => {
   // Найти элемент с определённым ID
   const targetCard = BlogiData.find((item) => item.id === targetId);
 
   return (
-    <div className="blogi">
+    <div className="blogi_card">
       {targetCard ? (
-        <div>
+        <div className="blogi">
           <img src={targetCard.image} alt={targetCard.title} />
-          <p className="blog_title">{targetCard.title}</p>
-          <p className="blog_subtitle">{targetCard.description}</p>
+          <div className="title">
+          <a href="#" className="blog_title">{targetCard.title}</a>
+            <p className="blog_subtitle">{targetCard.description}</p>
+            </div>
         </div>
       ) : (
         <p>Карточка с ID {targetId} не найдена.</p>
@@ -20,4 +22,4 @@ const Blog = ({ targetId }) => {
   );
 };
 
-export default blog;
+export default Blog;
