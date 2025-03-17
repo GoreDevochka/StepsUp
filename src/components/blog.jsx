@@ -5,7 +5,7 @@ const Blog = ({ targetId }) => {
   // Найти элемент с определённым ID
   const targetCard = BlogiData.find((item) => item.id === targetId);
 
-  return (
+    return (
     <div className="blogi_card">
       {targetCard ? (
         <div className="blogi">

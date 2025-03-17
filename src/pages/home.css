@@ -1,0 +1,23 @@
+:root{
+    --font-family: "CaviarDreams", sans-serif;
+    --second-family: "Helvetica", sans-serif;
+  }
+h1{
+    font-weight: 900;
+    color: rgba(148, 44, 44, 1);
+}
+.digest{
+    width: 435px;
+    
+}
+.digest_pics{
+    display: flex;
+    justify-content: space-between;
+}
+.article_container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+margin-bottom: 10%;
+}

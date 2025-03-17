@@ -2,25 +2,26 @@ import botinki from '/public/image 1.svg';
 import male from '/public/image-1.svg';
 import kids from '/public/image-2.svg';
 import female from '/public/image.svg';
-import './main.css';
+import { Link } from 'react-router-dom';
+import './main_cont.css';
 
 
-export default function Header() {
+export default function MainCont() {
     return (
         <div className='main_block'>
            <div className='main_img'> <img src={botinki} alt='botinki'></img></div>
             <div className="sections">
                 <div className="sec">
-                    <a href='#'><img src={female}></img></a>
-                    <h1>Женщинам</h1>
+                    <Link to='/home'><img src={female}></img></Link>
+                    <h2>Женщинам</h2>
                 </div>
                 <div className="sec">
-                    <a href='#'><img src={male}></img></a>
-                    <h1>Мужчинам</h1>
+                    <Link to='/home'><img src={male}></img></Link>
+                    <h2>Мужчинам</h2>
                 </div>
                 <div className="sec">
-                    <a href='#'><img src={kids}></img></a>
-                    <h1>Детям</h1>
+                    <Link to='/home'><img src={kids}></img></Link>
+                    <h2>Детям</h2>
                 </div>
             </div>
         </div>

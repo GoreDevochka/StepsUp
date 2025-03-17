@@ -16,6 +16,7 @@
   .blogi_card{
     width: 640px;
     padding: none;
+    margin-bottom: 30px;
   }
   a{
     text-decoration: none;

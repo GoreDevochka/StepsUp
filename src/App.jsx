@@ -1,17 +1,17 @@
-import Header from './components/header'
-import Footer from './components/footer'
-import Main from './components/main'
-import Blog from './components/blog'
-import './App.css'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/header';
+import Footer from './components/footer';
+import Home from './pages/home';
+import Female from './pages/female';
 export default function App() {
-
   return (
-    <div>
-    <Header /> 
-      <Main />
-      <Blog targetId={1} />
-    <Footer />
-    </div>
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/female' element={<Female />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );  
 }
