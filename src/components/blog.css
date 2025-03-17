@@ -1,0 +1,20 @@
+.blogi {
+    margin: 40px;
+    display: flex;
+    justify-content: center; /* Center the kartochki objects */
+    gap: 200px; /* Add 200px gap between kartochki objects */
+    text-align: center;
+  }
+  
+  .blog_title {
+    font-size: 32px;
+    color: #8F4800;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .blog_subtitle {
+   font-size: 24px;
+   color: #8F4800;
+   text-overflow: ellipsis; 
+  }
