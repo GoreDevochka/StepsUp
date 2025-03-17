@@ -1,0 +1,50 @@
+:root{
+    font-family: CaviarDreams, sans-serif;
+    
+  }
+  @font-face {
+      font-family: 'CaviarDreams';
+      src: url('../fonts/CaviarDreams.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'CaviarDreams_BoldItalic';
+      src: url('../fonts/CaviarDreams_BoldItalic.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'Helvetica Bold Oblique';
+      src: url('../fonts/helvetica_boldoblique.otf') format('opentype');
+  }
+footer{
+    background-color: rgba(77, 41, 41, 1);
+    padding-top: 30px;
+}
+.footer__container{
+    max-width: 1250px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+  .columns{
+    display: flex;
+    width: 325px;
+    justify-content: space-between;
+  }
+
+.columns a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+ }
+ li{
+    list-style-type: none;
+    padding-bottom: 24px;
+    
+ }
+ .socials{
+    display: flex;
+    justify-content: space-between; 
+    width: 162px;
+ }

@@ -1,0 +1,21 @@
+.sections{
+    display: flex;
+    max-width: 1094px;
+    justify-content: space-between;
+}
+.sec{
+    flex-direction: column;
+    text-align: center;
+}
+h1{
+    font-weight: 300;
+    font-size: 24px;
+}
+.main_img{
+    margin-bottom: 22px;
+}
+.main_block{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: fit-content;
+}

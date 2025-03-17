@@ -1,0 +1,62 @@
+:root{
+  font-family: CaviarDreams, sans-serif;
+}
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CaviarDreams_BoldItalic';
+    src: url('../fonts/CaviarDreams_BoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Helvetica Bold Oblique';
+    src: url('../fonts/helvetica_boldoblique.otf') format('opentype');
+}
+
+
+.NavFirst{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1290px;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 900;
+    vertical-align: middle;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.NavFirst a{
+    text-decoration: none;
+    color: black;
+}
+.NavBottom{
+    display: flex;
+    justify-content: space-between;
+    max-width: 620px;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 300;
+    vertical-align: middle;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.NavBottom a{
+    text-decoration: none;
+    color: black;
+}
+.left{
+    display: flex;
+ width: 160px;
+    justify-content: space-between;
+}
+.right{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
