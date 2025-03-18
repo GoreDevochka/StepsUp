@@ -10,7 +10,7 @@ const Blog = ({ targetId }) => {
       {targetCard ? (
         <div className="blogi">
           <img src={targetCard.image} alt={targetCard.title} />
-          <div className="title">
+          <div className="blog_titles">
           <a href="#" className="blog_title">{targetCard.title}</a>
             <p className="blog_subtitle">{targetCard.description}</p>
             </div>

@@ -10,7 +10,7 @@ const Item = ({ targetId }) => {
       {targetCard ? (
         <div className="items">
           <img src={targetCard.image} alt={targetCard.title} />
-          <div className="title">
+          <div className="item_titles">
           <a href="#" className="item_title">{targetCard.title}</a>
             <p className="item_subtitle">{targetCard.description}</p>
             </div>

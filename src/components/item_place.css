@@ -1,0 +1,14 @@
+.item_place {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.place {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between;
+}
+
+

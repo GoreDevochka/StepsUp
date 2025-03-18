@@ -1,14 +1,15 @@
 
 import Header from '../components/header';
 import ItemPlace from '../components/item_place';
-import './female.css';
-const Female = () => {
+
+
+const Sale = () => {
 
     
     return (
         <main>
             
-            <Header titleId={2} />
+            <Header titleId={5} />
         <div className=''>
         <ItemPlace />
         
@@ -16,4 +17,4 @@ const Female = () => {
             </main>
     );
 };
-export default Female;
+export default Sale;

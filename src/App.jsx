@@ -1,17 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/header';
+import { Routes, Route, } from 'react-router-dom';
 import Footer from './components/footer';
 import Home from './pages/home';
 import Female from './pages/female';
+import Male from './pages/male';
+import Kids from './pages/kids';
+import Sale from './pages/sale';
 export default function App() {
   return (
-    <Router>
-      <Header />
+ <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/female' element={<Female />} />
+        <Route path="/female" element={<Female />} />
+        <Route path="/male" element={<Male />} />
+        <Route path="/kids" element={<Kids />} />
+        <Route path="/sale" element={<Sale />} />
       </Routes>
       <Footer />
-    </Router>
+</div>
   );  
 }

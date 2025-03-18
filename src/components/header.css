@@ -1,4 +1,7 @@
-
+:root{
+    --font-family: "CaviarDreams", sans-serif;
+    --second-family: "Helvetica", sans-serif;
+  }
 .NavFirst{
     display: flex;
     justify-content: space-between;
@@ -43,4 +46,14 @@
     display: flex;
     width: 150px;
     justify-content: space-between;
+}
+.main_title{
+    font-size: 36px;
+    font-family: var(--second-family);
+    font-weight: 900;
+font-style: italic;
+margin-bottom: 20px;
+width: 1200px;
+margin-left: auto;
+margin-right: auto;
 }
