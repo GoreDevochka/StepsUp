@@ -1,5 +1,6 @@
 import { Routes, Route, } from 'react-router-dom';
 import Footer from './components/footer';
+import Product from './components/product'; // Import Product component
 import Home from './pages/home';
 import Female from './pages/female';
 import Male from './pages/male';
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/male" element={<Male />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/sale" element={<Sale />} />
+        <Route path="/item_card/:targetId" element={<Product />} />
       </Routes>
       <Footer />
 </div>

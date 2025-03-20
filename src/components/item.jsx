@@ -1,5 +1,7 @@
 import React from "react";
 import ItemData from "../data/item_data";
+import { Link } from 'react-router-dom'; // Import Link component
+
 import './item.css';
 const Item = ({ targetId }) => {
   // Найти элемент с определённым ID
@@ -11,8 +13,9 @@ const Item = ({ targetId }) => {
         <div className="items">
           <img src={targetCard.image} alt={targetCard.title} />
           <div className="item_titles">
-          <a href="#" className="item_title">{targetCard.title}</a>
-            <p className="item_subtitle">{targetCard.description}</p>
+            <Link to={`/item_card/${targetId}`} className="item_title">{targetCard.title}</Link>
+
+            <p className="item_coast">{targetCard.coast}</p>
             </div>
         </div>
       ) : (

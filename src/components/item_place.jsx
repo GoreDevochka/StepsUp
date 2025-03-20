@@ -17,9 +17,9 @@ const ItemPlace =  ({ sortOption }) => {
 
   const sortedData = [...filteredData].sort((a, b) => {
     if (sortOption === 'по цене (дороже)') {
-        return b.coast - a.coast; // Assuming coast is a number
+        return b.coast - a.coast; // Now using the new coast property
     } else if (sortOption === 'по цене (дешевле)') {
-        return a.coast - b.coast; // Assuming coast is a number
+        return a.coast - b.coast; // Now using the new coast property
     } else if (sortOption === 'по алфавиту') { 
         return a.title.localeCompare(b.title); // Assuming title is a string
     } else if (sortOption === 'по дате (новое)') {
