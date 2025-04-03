@@ -13,7 +13,7 @@ const Item = ({ targetId }) => {
         <div className="items">
           <img src={targetCard.image} alt={targetCard.title} />
           <div className="item_titles">
-            <Link to={`/item_card/${targetId}`} className="item_title">{targetCard.title}</Link>
+<Link to={`/product/${targetId}`} className="item_title">{targetCard.title}</Link> {/* Updated Link to point to product page */}
 
             <p className="item_coast">{targetCard.coast}</p>
             </div>

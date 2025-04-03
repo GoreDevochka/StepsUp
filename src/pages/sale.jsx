@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/header';
 import ItemPlace from '../components/item_place';
-
+import './sale.css';
 
 const Sale = () => {
 const [selectedSortOption, setSelectedSortOption] = useState('по цене (дороже)');
@@ -10,7 +10,7 @@ const [selectedSortOption, setSelectedSortOption] = useState('по цене (д�
         <main>
             
             <Header titleId={5} />
-            <div className=''>
+            <div className='sort'>
                 <select onChange={(e) => setSelectedSortOption(e.target.value)} value={selectedSortOption}>
                     <option value="по цене (дороже)">По цене (дороже)</option>
                     <option value="по цене (дешевле)">По цене (дешевле)</option>
