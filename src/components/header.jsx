@@ -18,12 +18,12 @@ export default function Header(props) {
 
                 <div className='left'>
             <Link to="/"> Блог</Link>
-            <Link to="/"> О нас</Link>
+            <Link to="/About"> О нас</Link>
                 </div>
-                <img src={logo} alt="Logo" />
+                <li> <Link to="/"><img src={logo} alt="Logo" /></Link></li>
                 <div className='right'>
                     <li> <Link to="/"><img src={user} alt="user"></img></Link></li>
-                    <li> <Link to='/'><img src={cart} alt="cart"></img></Link></li>
+                    <li> <Link to='/Cart'><img src={cart} alt="cart"></img></Link></li>
 
                 </div>
             </nav>

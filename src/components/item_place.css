@@ -16,13 +16,24 @@
     justify-content: space-between;
 }
 .category-buttons button{
-background-color: transparent;
-border: solid black 1px;
-border-radius: 50px;
-padding: 10px 20px 10px 20px;
-min-width: 80px;
-font-family: var(--font-family);
+    background-color: transparent;
+    border: solid black 1px;
+    border-radius: 90px;
+    padding: 10px 20px 10px 20px;
+    font-family: var(--font-family);
+    margin-right: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
 
+}
+.category-buttons button.active {
+    background-color: black;
+    color: white;
+}
+
+.category-buttons button:hover {
+    background-color: #f0f0f0;
 }
 
 .category-buttons{

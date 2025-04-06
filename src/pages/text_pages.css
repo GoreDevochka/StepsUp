@@ -1,0 +1,14 @@
+.textpage h1{
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-style: italic;
+    color: black;
+    line-height: 125%;
+}
+.textpage{
+    width: 1000px;
+    margin-bottom: 150px;
+}
+.contacts_text{
+    margin-bottom: 50px;
+}

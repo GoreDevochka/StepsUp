@@ -12,15 +12,15 @@ export default function MainCont() {
            <div className='main_img'> <img src={botinki} alt='botinki'></img></div>
             <div className="sections">
                 <div className="sec">
-                    <Link to='/home'><img src={female}></img></Link>
+                    <Link to='/Female'><img src={female}></img></Link>
                     <h2>Женщинам</h2>
                 </div>
                 <div className="sec">
-                    <Link to='/home'><img src={male}></img></Link>
+                    <Link to='/Male'><img src={male}></img></Link>
                     <h2>Мужчинам</h2>
                 </div>
                 <div className="sec">
-                    <Link to='/home'><img src={kids}></img></Link>
+                    <Link to='/Kids'><img src={kids}></img></Link>
                     <h2>Детям</h2>
                 </div>
             </div>

@@ -11,19 +11,19 @@ export default function Footer() {
             <div className='Nav1'>
                 <ul>
                     <li><Link to='#'>Бренды</Link></li>
-                    <li><Link to='#'>Женское</Link></li>
-                    <li><Link to='#'>Мужское</Link></li>
-                    <li><Link to='#'>Детское</Link></li>
-                    <li><Link to='#'>Sale</Link></li>
+                    <li><Link to='/Female'>Женское</Link></li>
+                    <li><Link to='/Male'>Мужское</Link></li>
+                    <li><Link to='/Kids'>Детское</Link></li>
+                    <li><Link to='/Sale'>Sale</Link></li>
                 </ul>
 
             </div>
             <div className='Nav2'>          
                 <ul>
-                    <li><Link to='#'>О нас</Link></li>
-                    <li><Link to='#'>Доставка</Link></li>
-                    <li><Link to='#'>Возврат и обмен</Link></li>
-                    <li><Link to='#'>Контакты</Link></li>
+                    <li><Link to='/About'>О нас</Link></li>
+                    <li><Link to='/Delivery'>Доставка</Link></li>
+                    <li><Link to='/Return'>Возврат и обмен</Link></li>
+                    <li><Link to='/Contacts'>Контакты</Link></li>
                 </ul>
 
                 </div>

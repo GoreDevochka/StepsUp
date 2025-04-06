@@ -1,0 +1,157 @@
+/* Product Page Styles */
+.product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+}
+
+.product_image img{
+  width: 680px;
+  height: 740px;
+  transition: opacity 0.3s ease;
+}
+
+.additionalImages {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.additionalImages img {
+  width: 130px;
+  height: 140px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.additionalImages img:hover {
+  border-color: #000;
+  opacity: 1;
+}
+
+/* Accordion Styles */
+.product-accordion {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+  color: #333;
+}
+
+.accordion-header::after {
+  content: '+';
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+  content: '-';
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #555;
+  overflow: hidden;
+  transition: 
+    max-height 0.3s ease-out,
+    padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 0 0 15px 0;
+}
+
+.accordion-item.active .accordion-header {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Existing product styles */
+.product_title{
+    font-size: 24px;
+    font-weight: 700;
+}
+.product_subtitle{
+    font-size: 16px;
+    font-weight: 400;
+}
+.product_coast{
+    font-size: 48px;
+    font-weight: 700;
+}
+.size-buttons button{
+    background-color: transparent;
+    border: solid black 1px;
+    border-radius: 90px;
+    padding: 10px 20px 10px 20px;
+    font-family: var(--font-family);
+    margin-right: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
+}
+
+.size-buttons button.active {
+    background-color: black;
+    color: white;
+}
+
+.size-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+.sizes{
+    margin-bottom: 30px;
+}
+.size-buttons{
+    display: flex;
+    max-width: 500px;
+}
+
+.add_tocart button{
+    background-color: rgba(148, 44, 44, 1);
+    border: none;
+    border-radius: 90px;
+    padding: 10px 20px 10px 20px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    width: 300px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add_tocart button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(148, 44, 44, 0.5);
+}
+
+.add_tocart button:hover:not(:disabled) {
+    background-color: rgba(148, 44, 44, 0.8);
+}

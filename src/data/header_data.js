@@ -8,7 +8,9 @@ const headerData = [
     { id: 7, title: 'О нас' },
     { id: 8, title: 'Контакты' },
     { id: 9, title: 'Личный кабинет' },
-    { id: 10, title: ' ' }, // Updated title for item_card page
+    { id: 10, title: ' ' },
+    { id: 11, title: 'Корзина' },
+    // Updated title for item_card page
 
 ];
 

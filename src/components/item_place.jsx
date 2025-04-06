@@ -30,7 +30,8 @@ const ItemPlace =  ({ sortOption }) => {
     return 0; // No sorting
   });
 
-  return (
+    return (
+      <main>
         <div className="item_place">
             <div className="category-buttons">
                 <button onClick={() => setSelectedCategory('кроссовки')}>Кроссовки</button>
@@ -42,7 +43,8 @@ const ItemPlace =  ({ sortOption }) => {
                     <Item key={item.id} targetId={item.id} />
                 ))}
             </div>
-        </div>
+            </div>
+        </main>
   );
 };
 

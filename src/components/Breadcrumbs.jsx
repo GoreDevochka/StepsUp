@@ -26,7 +26,7 @@ const Breadcrumbs = () => {
                                  value === 'kids' ? 'детское' : 
                                  value === 'sale' ? 'распродажа' : value}
                             </Link>
-                            {index < pathnames.length - 1 && " > "} 
+                            {index < pathnames.length - 1 && "  "} 
                         </li>
                     );
                 })}
