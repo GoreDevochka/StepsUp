@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
 import Footer from './components/footer';
 import Product from './components/product';
 import Home from './pages/home';
@@ -14,9 +15,11 @@ import Delivery from './pages/delivery';
 import Return from './pages/return';
 import Contacts from './pages/contacts';
 import Cart from './pages/cart';
-export default function App() {
+
+function App() {
   return (
-    <AuthProvider>
+    <CartProvider>
+      <AuthProvider>
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -34,6 +37,9 @@ export default function App() {
           </Routes>
           <Footer />
         </div>
-    </AuthProvider>
-  );  
+      </AuthProvider>
+    </CartProvider>
+  );
 }
+
+export default App;

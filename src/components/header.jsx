@@ -4,6 +4,7 @@ import cart from '/Cart.svg?url';
 import headerData from '../data/header_data';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useCart } from '../context/CartContext';
 import RegisterModal from './modals/RegisterModal';
 import LoginModal from './modals/LoginModal';
 import './header.css';
@@ -13,6 +14,7 @@ export default function Header(props) {
     const navigate = useNavigate();
     const [showRegisterModal, setShowRegisterModal] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
+    const { cart } = useCart();
     const titleId = props.titleId; 
     const title = headerData.find(item => item.id === titleId)?.title || 'Default Title';
 
@@ -32,7 +34,12 @@ export default function Header(props) {
                         >
                             <img src={user} alt="user" />
                         </button></li>
-                        <li> <Link to='/Cart'><img src={cart} alt="cart"></img></Link></li>
+                        <li> 
+                            <Link to='/Cart'>
+                                <img src={cart} alt="cart"></img>
+                                {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
+                            </Link>
+                        </li>
                     </div>
                 </nav>
                 <nav className='NavBottom'>
