@@ -1,37 +1,15 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
-import LoginModal from '../components/modals/LoginModal';
-import RegisterModal from '../components/modals/RegisterModal';
 import './account.css';
 
 const AccountPage = () => {
   const { user, isAuthenticated, logout } = useContext(AuthContext);
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
   if (!isAuthenticated) {
     return (
       <div className="account-container">
         <h2>Личный кабинет</h2>
-        <button className="login-btn" onClick={() => setShowLoginModal(true)}>Войти</button>
-        {showLoginModal && (
-          <LoginModal 
-            onClose={() => setShowLoginModal(false)}
-            showRegister={() => {
-              setShowLoginModal(false);
-              setShowRegisterModal(true);
-            }}
-          />
-        )}
-        {showRegisterModal && (
-          <RegisterModal 
-            onClose={() => setShowRegisterModal(false)}
-            showLogin={() => {
-              setShowRegisterModal(false);
-              setShowLoginModal(true);
-            }}
-          />
-        )}
-       </div>
+        <button className="login-btn" onClick={() => window.location.href = '/account'}>Войти</button>
+      </div>
     );
   }
 
@@ -41,12 +19,6 @@ const AccountPage = () => {
       
       <div className="user-info">
         <h3>Основная информация</h3>
-<<<<<<< HEAD
-        <p><strong>Имя:</strong> {user?.name}</p>
-        <p><strong>Email:</strong> {user?.email}</p>
-        <p><strong>Телефон:</strong> {user?.phone}</p>
-        <p><strong>Пароль:</strong> {user?.phone}</p>
-=======
         <p><strong>Имя:</strong> {user?.name || 'Не указано'}</p>
         <p><strong>Email:</strong> {user?.email || 'Не указан'}</p>
         <p><strong>Телефон:</strong> {user?.phone || 'Не указан'}</p>
@@ -59,7 +31,6 @@ const AccountPage = () => {
             </a>
           </div>
         )}
->>>>>>> b33e7eed2db9af412258056e8bb1f6a1ab9237c9
       </div>
 
       <div className="order-history">
