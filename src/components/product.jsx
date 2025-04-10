@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useCart } from '../context/CartContext';
 import ItemData from "../data/item_data";
 import Header from '../components/header';
 import { useParams } from 'react-router-dom';
@@ -9,6 +10,7 @@ const Product = () => {
   const { targetId } = useParams();
   const [selectedSize, setSelectedSize] = useState(null);
   const [activeTab, setActiveTab] = useState(null);
+  const { addToCart } = useCart();
 
   const targetCard = ItemData.find((item) => item.id === Number(targetId));
 
@@ -66,7 +68,25 @@ const Product = () => {
           
           <div className="add_tocart">
             <button
-              onClick={() => selectedSize && alert(`Товар "${targetCard.title}" (размер: ${selectedSize}) добавлен в корзину`)}
+              onClick={() => {
+                if (selectedSize) {
+                  const price = parseFloat(targetCard.coast.replace(/[^\d.]/g, ''));
+                  if (isNaN(price)) {
+                    alert('Ошибка: Невозможно определить цену товара');
+                    return;
+                  }
+                  
+                  addToCart({
+                    id: `${targetCard.id}-${selectedSize}`, // Ensure string concatenation
+                    name: targetCard.title,
+                    price: price,
+                    image: targetCard.image,
+                    size: selectedSize,
+                    quantity: 1
+                  });
+                  alert(`Товар "${targetCard.title}" (размер: ${selectedSize}) добавлен в корзину`);
+                }
+              }}
               disabled={!selectedSize}
             >
               {selectedSize ? 'В корзину' : 'Выберите размер'}
