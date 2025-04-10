@@ -1,34 +1,57 @@
-import { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
-const AuthContext = createContext();
+import apiAuth from '../api/apiAuth'; // Путь должен быть правильным в зависимости от вашей структуры папок
 
+// Создаём контекст
+export const AuthContext = createContext();
+
+// Провайдер для AuthContext
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
 
+  // Проверка авторизации при монтировании
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      // Verify token and fetch user data
-      // This is a placeholder - implement proper token verification
-      setIsAuthenticated(true);
+      apiAuth.getCurrentUser(token)
+        .then(response => {
+          login(response.data, token); // Use response.data
+        })
+        .catch(err => {
+          console.log('Ошибка при проверке токена:', err);
+          localStorage.removeItem('token'); // Clear invalid token
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    } else {
+      setLoading(false);
     }
   }, []);
+  
 
-  const login = (userData, token) => {
+  // Функция для логина
+  const login = (token) => {
     localStorage.setItem('token', token);
-    setUser(userData);
-    setIsAuthenticated(true);
+    apiAuth
+      .getCurrentUser(token)
+      .then((response) => {
+        setUser(response.data);
+      })
+      .catch((error) => {
+        console.error('Ошибка авторизации', error);
+      });
   };
 
+  // Функция для логаута
   const logout = () => {
     localStorage.removeItem('token');
     setUser(null);
-    setIsAuthenticated(false);
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

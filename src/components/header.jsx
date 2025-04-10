@@ -26,12 +26,7 @@ export default function Header(props) {
                     </div>
                     <li> <Link to="/"><img src={logo} alt="Logo" /></Link></li>
                     <div className='right'>
-                        <li> <button 
-                            onClick={() => setShowLoginModal(true)}
-                            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-                        >
-                            <img src={user} alt="user" />
-                        </button></li>
+                        <li> <Link to='/account'><img src={user} alt="user" /></Link></li>
                         <li> <Link to='/Cart'><img src={cart} alt="cart"></img></Link></li>
                     </div>
                 </nav>

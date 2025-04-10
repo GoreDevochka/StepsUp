@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/header';
 import { AuthProvider } from './context/AuthContext';
 import Footer from './components/footer';
 import Product from './components/product';
@@ -7,13 +6,15 @@ import Home from './pages/home';
 import AccountPage from './pages/account';
 import Female from './pages/female';
 import Male from './pages/male';
-import Kids from './pages/kids';
+import Kids from './pages/kids';  
 import Sale from './pages/sale';
 import About from './pages/about';
 import Delivery from './pages/delivery';
 import Return from './pages/return';
 import Contacts from './pages/contacts';
 import Cart from './pages/cart';
+
+
 export default function App() {
   return (
     <AuthProvider>

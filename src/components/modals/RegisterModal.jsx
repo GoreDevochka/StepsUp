@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import AuthContext from '../../context/AuthContext';
 import './modals.css';
+import apiAuth from '../../api/apiAuth';
 
 const RegisterModal = ({ onClose, showLogin }) => {
   const [formData, setFormData] = useState({
@@ -24,27 +25,26 @@ const RegisterModal = ({ onClose, showLogin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3001/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Registration failed');
-      }
-
-      const { accessToken, user } = await response.json();
+      const response = await apiAuth.register(
+        formData.email,
+        formData.password,
+        formData.name
+      );
+  
+      const { accessToken, user } = response.data;
+  
+      // Сохраняем токен и пользователя
+      localStorage.setItem('token', accessToken);
       login(user, accessToken);
+  
       onClose();
+      window.location.href = '/account';
     } catch (error) {
       console.error('Registration error:', error);
-      alert(error.message);
+      alert(error.response?.data?.error || 'Ошибка регистрации');
     }
   };
+  
 
   return (
     <div className="modal-overlay">

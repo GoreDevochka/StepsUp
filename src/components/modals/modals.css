@@ -82,3 +82,14 @@
   text-decoration: underline;
   cursor: pointer;
 }
+.success-message {
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
