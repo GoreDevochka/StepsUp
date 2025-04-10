@@ -1,9 +1,0 @@
-const Router = require('express').Router;
-const router = new Router();
-const TypeController = require('../controllers/TypeController');
-
-router.post('/', TypeController.create);
-router.get('/', TypeController.getAll);
-
-
-module.exports = router;
